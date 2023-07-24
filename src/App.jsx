@@ -39,6 +39,8 @@ function allProps(index) {
 
 let tasks = [];
 
+//{id: 1, text: 'Пока тут ничего нет...', completed: false, editing: false}
+
 function App() {
   const [value, setValue] = useState(0);
   const [checked, setChecked] = useState(false);
@@ -140,12 +142,16 @@ function App() {
   const getCompletedTodos = () => {
     if (state.tasks.length > 0) {
       return state.tasks.filter((obj) => obj.completed)
+    } else {
+      return state.tasks
     }
   }
 
   const getActualTodos = () => {
     if (state.tasks.length > 0) {
       return state.tasks.filter((obj) => !obj.completed)
+    } else {
+      return state.tasks
     }
   }
 
