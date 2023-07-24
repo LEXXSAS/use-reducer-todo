@@ -1,0 +1,82 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 450px;
+}
+
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 1rem;
+}
+
+.container {
+  width: 95%;
+}
+
+img {
+  width: 60%;
+  height: auto;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.css-ee20y-MuiPaper-root {
+  background-color: #1976d2 !important;
+  color: white !important;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  padding: 8px !important;
+}
+
+.circle {
+  margin-left: auto !important;
+}
+
+.css-14egwyp-MuiListItem-root {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.item-buttons {
+  margin-left: auto !important;
+}
