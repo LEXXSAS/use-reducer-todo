@@ -49,7 +49,7 @@ function App() {
   const [, ] = useState(() => {
     return tasks = JSON.parse(localStorage.getItem('state')) || [];
   })
-  const [state, dispatch] = useReducer(reducer, {tasks});
+  const [state, dispatch] = useReducer(reducer, {filterBy: 'completed', tasks});
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -91,10 +91,11 @@ function App() {
       }
 
       case 'ALL_TRUE':
+        // return state.tasks.map(obj => ({...obj, completed: true}))
       return {
       ...state,
       tasks: state.tasks.map((obj) => obj.id == obj.id ? {...obj, completed: true} : obj)
-      }
+    }
 
       case 'ALL_FALSE':
       return {
@@ -208,6 +209,12 @@ function App() {
           <Tab label="Завершённые" onClick={getActualTodos} {...allProps(2)} />
         </Tabs>
         <CustomTabPanel value={value} index={0}>
+           {/* {state.tasks.filter((obj) => {
+            if (state.filterBy === 'all') {return true}
+            if (state.filterBy === 'completed') {return obj.completed}
+            if (state.filterBy === 'not-completed') {return !obj.completed}
+           })
+           .map((obj) => <li key={obj.id}>{obj.text}</li>)} */}
           <Item items={getAll()} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
