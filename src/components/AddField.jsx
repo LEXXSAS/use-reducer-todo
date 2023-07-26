@@ -8,9 +8,9 @@ import { ValueContext } from "./context";
 const AddField = () => {
   const {inputValue, setInputValue, addTask, checked, setChecked, addTaskEnter} = useContext(ValueContext)
   
-  function handleChange() {
-    setChecked(!checked)
-  }
+  // function handleChange(event) {
+  //   setChecked(!checked)
+  // }
 
   return (
     <ListItem
@@ -18,7 +18,7 @@ const AddField = () => {
     >
       <Checkbox
         checked={checked}
-        onChange={handleChange}
+        onChange={(e) => setChecked(e.target.checked)}
         className="checkbox"
         icon={<RadioButtonUncheckedIcon />}
         checkedIcon={<CheckCircleIcon />}

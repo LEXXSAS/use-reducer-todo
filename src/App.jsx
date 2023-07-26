@@ -117,18 +117,17 @@ function App() {
     }
   }
 
-  // useEffect(() => {
-  //   return () => localStorage.setItem('state', JSON.stringify(state));
-  // }, [])
-
   const addTask = () => {
     if (inputValue !== '') {
       dispatch({
         type: 'ADD_TASK',
         payload: inputValue,
         completed: checked,
-      });
-    }
+      })
+    } 
+    setTimeout(() => {
+      setChecked(false)
+    }, 0);
     setInputValue('');
   }
 
